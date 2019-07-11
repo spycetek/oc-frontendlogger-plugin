@@ -1,0 +1,6 @@
+plugin:
+    name: 'spycetek.frontendlogger::lang.plugin.name'
+    description: 'spycetek.frontendlogger::lang.plugin.description'
+    author: SpyceTek
+    icon: oc-icon-leaf
+    homepage: ''
