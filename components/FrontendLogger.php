@@ -1,7 +1,9 @@
 <?php namespace SpyceTek\FrontendLogger\Components;
 
-use Cms\Classes\ComponentBase;
+
 use Log;
+use Lang;
+use Cms\Classes\ComponentBase;
 
 class FrontendLogger extends ComponentBase
 {
@@ -9,48 +11,48 @@ class FrontendLogger extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name' => 'Frontend Logger',
-            'description' => 'Frontend Logger'
+            'name' => Lang::get('spycetek.frontendlogger::lang.plugin.name'),
+            'description' => Lang::get('spycetek.frontendlogger::lang.plugin.description'),
         ];
     }
 
-    public function emergency($message)
+    public function onEmergency()
     {
-        Log::emergency($message);
+        Log::emergency(post('message'));
     }
 
-    public function alert($message)
+    public function onAlert()
     {
-        Log::alert($message);
+        Log::alert(post('message'));
     }
 
-    public function critical($message)
+    public function onCritical()
     {
-        Log::critical($message);
+        Log::critical(post('message'));
     }
 
-    public function error($message)
+    public function onError()
     {
-        Log::error($message);
+        Log::error(post('message'));
     }
 
-    public function warning($message)
+    public function onWarning()
     {
-        Log::warning( $message);
+        Log::warning(post('message'));
     }
 
-    public function notice($message)
+    public function onNotice()
     {
-        Log::notice($message);
+        Log::notice(post('message'));
     }
 
-    public function info($message)
+    public function onInfo()
     {
-        Log::info($message);
+        Log::info(post('message'));
     }
 
-    public function debug($message)
+    public function onDebug()
     {
-        Log::debug($message);
+        Log::debug(post('message'));
     }
 }

@@ -1,6 +1,6 @@
 <?php return [
     'plugin' => [
         'name' => 'FrontendLogger',
-        'description' => ''
+        'description' => 'This is an OctoberCMS plugin that helps developer to record frontend logs.'
     ]
 ];
