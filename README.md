@@ -8,25 +8,32 @@ This is an [OctoberCMS](http://octobercms.com/) plugin that helps developer to r
 This [OctoberCMS](http://octobercms.com/) component provides logger methods that
 the script in the page that has this component can record frontend logs to system.log file.
 
-* frontendlogger::onEmergency
-* frontendlogger::onAlert
-* frontendlogger::onCritical
-* frontendlogger::onError
-* frontendlogger::onWarning
-* frontendlogger::onNotice
-* frontendlogger::onInfo
-* frontendlogger::onDebug
+Types of Logging levels:
 
-Example usage;
+* FrontendLogger::onEmergency
+* FrontendLogger::onAlert
+* FrontendLogger::onCritical
+* FrontendLogger::onError
+* FrontendLogger::onWarning
+* FrontendLogger::onNotice
+* FrontendLogger::onInfo
+* FrontendLogger::onDebug
+
+
+NOTE: Please put ```{% framework %}``` or ```{% framework extras %}``` to use ```$.request``` method. Please refer example below.
+
+Example usage:
 
 ```
 <script>
-    $.request('frontendlogger::onError', {
+    $.request('FrontendLogger::onError', {
         data: {
             message : 'error message here!'
         }
     });
 </script>
+{% framework %}
+{% framework extras %}
 ```
 
 ##Other
