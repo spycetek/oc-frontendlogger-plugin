@@ -20,11 +20,12 @@ Types of Logging levels:
 * FrontendLogger::onDebug
 
 
-NOTE: Please put ```{% framework %}``` or ```{% framework extras %}``` to use ```$.request``` method. Please refer example below.
+NOTE: Please put ```{% framework %}``` or ```{% framework extras %}``` before the ```<script>``` to use ```$.request``` method. Please refer example below.
 
 Example usage:
 
 ```
+{% framework %}
 <script>
     $.request('FrontendLogger::onError', {
         data: {
@@ -32,8 +33,6 @@ Example usage:
         }
     });
 </script>
-{% framework %}
-{% framework extras %}
 ```
 
 ##Other

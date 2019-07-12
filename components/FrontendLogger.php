@@ -11,8 +11,8 @@ class FrontendLogger extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name' => Lang::get('spycetek.frontendlogger::lang.plugin.name'),
-            'description' => Lang::get('spycetek.frontendlogger::lang.plugin.description'),
+            'name' => Lang::get('spycetek.frontendlogger::plugin.name'),
+            'description' => Lang::get('spycetek.frontendlogger::plugin.description'),
         ];
     }
 
